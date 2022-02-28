@@ -31,6 +31,7 @@ gem 'aasm'
 gem 'bootstrap'
 gem 'devise'
 gem 'slim'
+gem "solargraph", "~> 0.44.3"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -41,6 +42,7 @@ group :development, :test do
   gem 'faker'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem "shoulda-matchers", "~> 5.1"
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
@@ -63,6 +65,7 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
+  gem 'simplecov-rcov'
   gem 'webdrivers'
 end
 
@@ -72,3 +75,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
