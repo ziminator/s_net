@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_action :find_path, only: %i[show edit update destroy]
+
   def index
     @pages = Page.all
   end
@@ -38,5 +40,9 @@ class PagesController < ApplicationController
 
   def find_path
     @page = Page.find(params[:id])
+  end
+
+  def page_params
+    params.require(:page).permit(:title, :permalink, :body)
   end
 end

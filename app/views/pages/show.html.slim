@@ -1,0 +1,12 @@
+p
+  strong Title: 
+  = @page.title
+p
+  strong Body: 
+  = @page.body
+
+= link_to 'Edit', edit_page_path(@page), class: 'btn btn-sm btn-success'
+'
+= link_to 'Delete', page_path(@page), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: 'Are you sure?' }
+'
+= link_to 'Back', :back, class: 'btn btn-sm btn-primary'

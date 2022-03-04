@@ -1,0 +1,9 @@
+= form_with(model: page, local: true) do |f|
+  .form-group
+    = f.label :title
+    = f.text_field :title
+  .form-group
+    = f.label :body
+    = f.text_area :body
+  .form-group
+    = f.submit 'Submit', class: 'btn btn-success'

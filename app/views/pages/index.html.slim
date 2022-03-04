@@ -1,0 +1,13 @@
+h2 Pages
+ul
+  - @pages.each do |page|
+    li
+      = page.permalink
+      |: 
+      = page.title
+      |
+      p  
+        = link_to 'Show', page_path(page), class: 'btn btn-sm btn-info'
+
+p
+  = link_to 'Create new page', new_page_url, class: 'btn btn-sm btn-primary'
